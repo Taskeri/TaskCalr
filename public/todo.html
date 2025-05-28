@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>AZN | ניהול משימות</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #b2ffb2, #003366);
+      color: #003366;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #e0f7fa;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+
+    input[type="text"] {
+      width: 40%;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+  <script defer src="todo.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>ניהול משימות למשתמש: <span id="user"></span></h2>
+
+    <!-- טופס הוספה רק למנהלים -->
+    <div id="admin-form" style="display: none;">
+      <h3>הוספת משימה חדשה</h3>
+      <form id="task-form">
+        <input type="text" id="taskUser" placeholder="שם משתמש" required />
+        <input type="text" id="taskText" placeholder="תיאור משימה" required />
+        <button type="submit">הוסף משימה</button>
+      </form>
+    </div>
+
+    <!-- טבלת משימות -->
+    <table id="task-table">
+      <thead>
+        <tr>
+          <th>שם משתמש</th>
+          <th>משימה</th>
+          <th>בוצע</th>
+          <th>פעולות</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+</html>

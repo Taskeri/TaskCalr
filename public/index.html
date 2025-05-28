@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZN | התחברות למערכת</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to left, #b2ffb2, #003366);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      color: #333;
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input {
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://cdn.glitch.global/896601a3-4113-4a7a-81d6-f4ac31ff707b/%E2%80%8F%E2%80%8FLogo.png?v=1744798533780" alt="AZN Logo" class="logo" />
+    <h2>ברוך הבא למערכת AZN</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="שם משתמש" required>
+      <input type="password" id="password" placeholder="סיסמה" required>
+      <button type="submit">התחבר</button>
+    </form>
+    <p id="error"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
